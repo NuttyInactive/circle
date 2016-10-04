@@ -6,10 +6,10 @@ gulp.task('styles', () => {
   gulp.src('./scss/style.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(cleanCSS())
-    .pipe(gulp.dest('./css/'));
+    .pipe(gulp.dest('./css'));
 });
 
 gulp.task('default', () => {
   gulp.start('styles');
-  gulp.watch('./scss/*.scss', ['styles']);
+  gulp.watch('./scss/**/*.scss', ['styles']);
 });
