@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site.
+// -----------------------------------------------------------------------------
+
+.site-footer {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-top: 30px;
+	background-color: $light-white;
+	border-top: 1px solid $light-gray;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+
+.site-footer-text {
+	text-align: right;
+}
