@@ -1,0 +1,20 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site.
+// -----------------------------------------------------------------------------
+
+.site-header {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: $light-white;
+	border-bottom: 1px solid $light-gray;
+}
+
+.site-header-logo {
+	font-size: 20px;
+	vertical-align: middle;
+}
+
+.site-header-nav {
+	padding-top: 3px;
+	text-align: right;
+}
