@@ -1,6 +1,10 @@
 @import 'vendors/_bootstrap';
-@import 'base/_colors.scss';
-@import 'base/_fonts.scss';
-@import 'base/_typography.scss';
-@import 'layout/_header.scss';
-@import 'layout/_footer.scss';
+
+@import 'base/_colors';
+@import 'base/_fonts';
+@import 'base/_typography';
+
+@import 'layout/_header';
+@import 'layout/_footer';
+
+@import 'components/_navigation';

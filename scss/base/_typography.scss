@@ -3,8 +3,12 @@
 // -----------------------------------------------------------------------------
 
 // Regular font family
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack: 'Open Sans', sans-serif !default;
 
 // Code (monospace) font family
 $code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
 
+body {
+	color: $dark-gray;
+	font: normal 85% / 1.4 $text-font-stack;
+}
