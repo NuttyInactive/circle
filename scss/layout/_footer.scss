@@ -2,17 +2,25 @@
 // This file contains all styles related to the footer of the site.
 // -----------------------------------------------------------------------------
 
+footer {
+	font-size: 12px;
+}
+
 .site-footer {
 	padding-top: 2px;
 	padding-bottom: 2px;
 	margin-top: 30px;
 	background-color: $light-white;
 	border-top: 1px solid $light-gray;
-	position: absolute;
+	border-bottom: 1px solid $light-gray;
+	position: relative;
 	width: 100%;
-	bottom: 0;
 }
 
-.site-footer-text {
+.site-footer-center {
+	text-align: center;
+}
+
+.site-footer-right {
 	text-align: right;
 }
