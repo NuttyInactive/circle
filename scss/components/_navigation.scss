@@ -7,18 +7,21 @@ nav {
 	text-align: right;
 }
 
-nav ul {
-	list-style: none;
-	display: block;
-}
-
 nav ul li {
+	list-style: none;
 	display: inline;
 }
 
 nav a {
+	@include transition(background 0.8s ease);
 	padding: 2px 4px 2px 4px;
 	margin-left: 8px;
+
+	&:hover {
+		@include transition(background 0.3s ease);
+		background-color: $light-gray;
+		text-decoration: none;
+	}
 }
 
 nav a.active {
