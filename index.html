@@ -4,60 +4,99 @@
 <head>
 
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="Circle Theme">
 	<meta name="author" content="NuttyNeko">
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/slideout.min.js"></script>
 
 	<title>circle ●</title>
 
 </head>
 <body>
 
-	<header class="site-header">
+	<nav id="slideout-nav">
+
+		<ul>
+			<li><a href="#">home</a></li>
+			<li><a href="#">features</a></li>
+			<li><a href="#">docs</a></li>
+			<li><a href="#">github</a></li>
+		</ul>
+	</nav>
+
+	<main id="panel">
+		<header class="site-header">
+			<div class="container">
+				<div class="row">
+					<div class="site-header-logo col-xs-8 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+						circle ●
+					</div>
+					<div class="col-xs-4 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+						<nav id="header-nav-xs">
+							<button class="toggle-button">☰</button>
+						</nav>
+						<nav id="header-nav">
+							<ul>
+								<li><a class="active" href="#">home</a></li>
+								<li><a href="#">features</a></li>
+								<li><a href="#">docs</a></li>
+								<li><a href="#">github</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+
 		<div class="container">
 			<div class="row">
-				<div class="site-header-logo col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
-					circle ●
-				</div>
-				<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
-					<nav>
-						<ul>
-							<li><a class="nav-item nav-link active" href="#">home</a></li>
-							<li><a class="nav-item nav-link" href="#">about</a></li>
-							<li><a class="nav-item nav-link" href="#">code</a></li>
-							<li><a class="nav-item nav-link" href="#">music</a></li>
-						</ul>
-					</nav>
+				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-6">
+					<h1>circle theme</h1>
+					<p>A circle is a simple closed shape in Euclidean geometry. It is the set of all points in a plane that are at a given distance from a given point, the centre; equivalently it is the curve traced out by a point that moves so that its distance from a given point is constant. The distance between any of the points and the centre is called the radius.</p>
+					<p>A circle is a simple closed curve which divides the plane into two regions: an interior and an exterior. In everyday use, the term "circle" may be used interchangeably to refer to either the boundary of the figure, or to the whole figure including its interior; in strict technical usage, the circle is only the boundary and the whole figure is called a disc.</p>
 				</div>
 			</div>
 		</div>
-	</header>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-6">
-				<h1>circle theme</h1>
-				<p>A circle is a simple closed shape in Euclidean geometry. It is the set of all points in a plane that are at a given distance from a given point, the centre; equivalently it is the curve traced out by a point that moves so that its distance from a given point is constant. The distance between any of the points and the centre is called the radius.</p>
-				<p>A circle is a simple closed curve which divides the plane into two regions: an interior and an exterior. In everyday use, the term "circle" may be used interchangeably to refer to either the boundary of the figure, or to the whole figure including its interior; in strict technical usage, the circle is only the boundary and the whole figure is called a disc.</p>
+		<footer class="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="site-footer-left col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
+					<div class="site-footer-center col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
+						© 2016 NuttyNeko
+					</div>
+					<div class="site-footer-right col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
+						<a href="https://github.com/NuttyNeko/circle" target="_blank">●</a>
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
+		</footer>
+	</main>
 
-	<footer class="site-footer">
-		<div class="container">
-			<div class="row">
-				<div class="site-footer-left col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"></div>
-				<div class="site-footer-center col-xs-10 col-sm-10 col-md-10 col-lg-10 col-xl-10">
-					© 2016 NuttyNeko
-				</div>
-				<div class="site-footer-right col-xs-1 col-sm-1 col-md-1 col-lg-1 col-xl-1">
-					<a href="https://github.com/NuttyNeko/circle" target="_blank">●</a>
-				</div>
-			</div>
-		</div>
-	</footer>
+	<script>
+		var slideout = new Slideout({
+			'panel': document.getElementById('panel'),
+			'menu': document.getElementById('slideout-nav'),
+			'padding': 256,
+			'tolerance': 70,
+			'side': 'left'
+		});
+
+		// hamburger toggle button
+		document.querySelector('.toggle-button').addEventListener('click', function() {
+			slideout.toggle();
+		});
+
+		// close menu when any area of the panel is clicked
+		document.querySelector('#panel').addEventListener('click', function(e) {
+			if (e.target.className !== "toggle-button") {
+				slideout.close();
+			}
+		});
+	</script>
 
 </body>
 </html>

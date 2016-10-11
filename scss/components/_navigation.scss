@@ -2,17 +2,17 @@
 // This file contains all styles related to the navigation menu.
 // -----------------------------------------------------------------------------
 
-nav {
+#header-nav {
 	padding-top: 5px;
 	text-align: right;
 }
 
-nav ul li {
+#header-nav ul li {
 	list-style: none;
 	display: inline;
 }
 
-nav a {
+#header-nav a {
 	@include transition(background 0.8s ease);
 	padding: 2px 4px 2px 4px;
 	margin-left: 8px;
@@ -24,6 +24,54 @@ nav a {
 	}
 }
 
-nav a.active {
+#header-nav a.active {
 	background-color: $light-gray;
+}
+
+#header-nav-xs {
+	text-align: right;
+	padding: 4px 0px 16px 0px;
+}
+
+@media only screen and (min-width: 544px) {
+	#header-nav-xs {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 544px) {
+	#header-nav {
+		display: none;
+	}
+}
+
+// -----------------------------------------------------------------------------
+
+#slideout-nav {
+	text-align: center;
+	background-color: #ffffff;
+	border-right: 1px solid $light-gray;
+}
+
+#slideout-nav ul {
+	display: block;
+	padding: 0px;
+	margin: 49px 0px 0px 0px;
+}
+
+#slideout-nav ul li {
+	@include transition(background 0.8s ease);
+	padding: 12px 0px 12px 0px;
+	list-style: none;
+	text-indent: 0px;
+
+	&:hover {
+		@include transition(background 0.3s ease);
+		background-color: #efefef;
+		text-decoration: none;
+	}
+}
+
+#slideout-nav ul li a {
+	text-decoration: none;
 }
