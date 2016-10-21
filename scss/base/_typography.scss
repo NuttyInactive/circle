@@ -6,9 +6,20 @@
 $text-font-stack: 'Open Sans', sans-serif !default;
 
 // Code (monospace) font family
-$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+$code-font-stack: 'Courier New', monospace !default;
 
 body {
 	color: $dark-gray;
 	font: normal 100% / 1.8 $text-font-stack;
+}
+
+p {
+	text-align: justify;
+}
+
+code {
+	background: rgba(0,0,0,0.04);
+	border-radius: 3px;
+	padding: 0.2em;
+	font: $code-font-stack;
 }
