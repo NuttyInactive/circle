@@ -9,7 +9,11 @@ gulp.task('styles', () => {
     .pipe(gulp.dest('./css'));
 });
 
-gulp.task('default', () => {
+gulp.task('dev', () => {
   gulp.start('styles');
   gulp.watch('./scss/**/*.scss', ['styles']);
+});
+
+gulp.task('default', () => {
+  gulp.start('styles');
 });
