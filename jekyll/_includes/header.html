@@ -1,0 +1,19 @@
+<header class="site-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-1 col-xl-12"></div>
+			<div class="site-header-logo col-xs-8 col-sm-4 col-md-4 col-lg-3 col-xl-4">
+				{{ site.title }}
+			</div>
+			<div class="col-xs-4 col-sm-8 col-md-8 col-lg-7 col-xl-8">
+				<nav id="header-nav-xs">
+					<button class="toggle-button">☰</button>
+				</nav>
+				<nav id="header-nav">
+					{% include navigation.html %}
+				</nav>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-1 col-xl-12"></div>
+		</div>
+	</div>
+</header>
