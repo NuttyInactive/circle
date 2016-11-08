@@ -10,8 +10,13 @@ gulp.task('styles', () => {
 });
 
 gulp.task('dev', () => {
-  gulp.start('styles');
-  gulp.watch('./scss/**/*.scss', ['styles']);
+  gulp.start('jekyll');
+  gulp.watch('./scss/**/*.scss', ['jekyll']);
+});
+
+gulp.task('jekyll', ['styles'], () => {
+  gulp.src(['./css/*.css']).pipe(gulp.dest('./jekyll/assets/css'));
+  gulp.src(['./js/*.js']).pipe(gulp.dest('./jekyll/assets/js'));
 });
 
 gulp.task('dist', ['styles'], () => {
@@ -22,5 +27,6 @@ gulp.task('dist', ['styles'], () => {
 
 gulp.task('default', () => {
   gulp.start('styles');
+  gulp.start('jekyll');
   gulp.start('dist');
 });
